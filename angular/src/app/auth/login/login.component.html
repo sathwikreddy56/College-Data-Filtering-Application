@@ -1,0 +1,30 @@
+<div class="login-page">
+    <mat-card class="mat-elevation-z12" id="loginBox">
+      <mat-card-title style="text-align:center;">Tech Assignment [Mindler]</mat-card-title>
+      <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+        <mat-tab label="USER" id="userTab">
+          <mat-card-content>
+            <form action="">
+              <mat-form-field>
+                <input matInput placeholder="Email"  name="useremail" ngModel #email="ngModel" id="email">
+                <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Password" type="password" minlength="6" name="userpassword" ngModel
+                  #password="ngModel" id="password">
+                <mat-icon matSuffix>lock</mat-icon>
+              </mat-form-field>
+              <button mat-raised-button color="primary" name="UserSubmit" class="login-button" (click)="login(email,password)" id="submitButton">
+                SUBMIT
+              </button>
+            </form>
+            <button mat-raised-button class="login-button" routerLink="/user/signup" id="userSignupLink">
+              Sign Up
+            </button>
+          </mat-card-content>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>
+<router-outlet></router-outlet>
+

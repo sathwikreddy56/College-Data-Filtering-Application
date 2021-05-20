@@ -1,0 +1,35 @@
+<div class="dashboard">
+<mat-drawer-container class="example-container">
+      <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+      <mat-drawer-content class="mat-elevation-z8">
+            <div *ngFor="let college of colleges" >
+                  <mat-card class="example-card">
+                        <mat-card-header>
+                              <mat-card-title>{{college.name}}</mat-card-title>
+                              <mat-card-subtitle>Founded in {{college.year_founded}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-chip *ngFor="let facility of college.facilities;" >{{facility}}</mat-chip>
+                        <mat-chip-list>
+                              <mat-chip color="accent" >{{college.state}}</mat-chip>
+                              <mat-chip color="accent" >{{college.city}}</mat-chip>
+                        </mat-chip-list>
+                  </mat-card>
+            </div>
+      </mat-drawer-content>
+      </mat-drawer-container>
+</div>
+
+<!--<ul class="colleges">
+    <li *ngFor="let college of colleges">
+      <mat-card class="example-card">
+            <mat-card-header>
+                  <mat-card-title>{{college.name}}</mat-card-title>
+                  <mat-card-subtitle>Founded in {{college.name}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                  {{college.facilities}}
+            </mat-card-content>
+      </mat-card>
+        <span class="badge">{{college.city}}</span> {{college.state}}
+    </li>
+  </ul>-->

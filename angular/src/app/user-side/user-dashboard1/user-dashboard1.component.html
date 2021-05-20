@@ -1,0 +1,65 @@
+<div class="dashboard">
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" class="" opened>
+      <br />
+      <div>
+        <mat-card-content>
+          <form class="my-form">
+            <!--SEARCH INPUT-->
+            <mat-form-field class="full-width">
+              <mat-label>Search</mat-label>
+              <input matInput placeholder="UserName" name="username" ngModel #username="ngModel" id="username"/>
+            </mat-form-field>
+            <!--<select (change)="onState($event)">
+              <option *ngFor="let state of statesarr" value={{state}}>{{state}}</option>
+            </select>-->
+            <!--STATE INPUT-->
+            <mat-form-field  appearance="fill">
+              <mat-label>STATE</mat-label>
+              <mat-select (selectionChange)="onState($event)">
+                <mat-option *ngFor="let state of statesarr" value={{state}}>{{state}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <!--CITY INPUT-->
+            <mat-form-field appearance="fill">
+              <mat-label>CITY</mat-label>
+              <mat-select (selectionChange)="onState($event)">
+                <mat-option *ngFor="let city of citiesarr" value={{city}}>{{city}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </form>
+          <button mat-raised-button class="filter-button center" (click)="populate_data()" id="submitButton" color="primary" >
+            Apply Filters
+          </button>
+        </mat-card-content>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <div class="table-cont">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Year</th>
+              <th>State</th>
+              <th>city</th>
+              <th>facilities</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let college of colleges">
+              <td class="name">{{ college.name }}</td>
+              <td>{{ college.year_founded }}</td>
+              <td>{{ college.state }}</td>
+              <td>{{ college.city }}</td>
+              <td>
+                <button class="btn-sm" *ngFor="let facility of college.facilities"> {{ facility }} </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

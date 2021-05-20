@@ -1,0 +1,28 @@
+<div class="login-page">
+    <mat-card class="mat-elevation-z12" id="signupBox">
+      <mat-card-title style="text-align:center;">Sign Up</mat-card-title>
+      <mat-card-content>
+        <form class="my-form">
+               <mat-form-field class="full-width">
+                  <mat-label>Enter Username</mat-label>
+                  <input  matInput  placeholder="UserName" name="username" ngModel #username="ngModel" id="username" required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>Enter Email</mat-label>
+                  <input  matInput  placeholder="Email"  name="email" ngModel #email="ngModel" id="email"  required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>Enter Password</mat-label>
+                  <input  matInput  placeholder="Password" type="password" name="password" #password="ngModel" ngModel id="password" required>
+               </mat-form-field>
+        </form>
+        <button mat-raised-button class="login-button" (click)="signup(username,email,password)" id="submitButton" color="primary" >
+             Submit
+          </button>
+          <button mat-raised-button class="login-button" id="loginLink" routerLink="/user/login" >
+            Go to Login
+         </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
