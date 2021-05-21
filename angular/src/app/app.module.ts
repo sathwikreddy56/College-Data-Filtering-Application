@@ -23,6 +23,7 @@ import { UserNavbarComponent } from './user-side/user-navbar/user-navbar.compone
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     FormsModule,
     MatInputModule,
+    MatMenuModule,
     MatSelectModule,
     MatCardModule,
     MatTableModule,

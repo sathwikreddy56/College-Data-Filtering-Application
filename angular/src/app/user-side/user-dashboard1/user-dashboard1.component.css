@@ -12,12 +12,12 @@
   overflow: hidden;
 }
 .mat-drawer-container{
-  margin-top: 5%;
-  margin-left: 5%;
+  margin-top: 3%;
+  margin-left: 3%;
   margin-right: 3%;
-  margin-bottom: 1%;
+  margin-bottom: 3%;
   background-color: #9da9f8;
-  height: 75%; 
+  height: 90%; 
   overflow: hidden;
 }
 mat-form-field, mat-checkbox {
@@ -28,8 +28,8 @@ mat-form-field, mat-checkbox {
 .filter-button{
   margin: 0;
   position: absolute;
-  top: 90%;
-  left: 62%;
+  top: 92%;
+  left: 60%;
 }
 .mat-drawer{
   width: 300px;
@@ -37,6 +37,7 @@ mat-form-field, mat-checkbox {
   margin-top: 10px;
   margin-bottom: 10px;
   border: 10px;
+  border: 2px solid rgb(189, 189, 189);
 }
 .table-cont{
   border: 20px;
@@ -59,15 +60,36 @@ mat-chip{
 }
 table, th , td {
   
-  border: 1px solid grey;
+  border: 2px solid rgb(189, 189, 189);
   border-collapse: collapse;
   padding: 5px;
 }
 
 table tr:nth-child(odd) {
-  background-color: #f1f1f1;
+  background-color: #e7f4f5;
 }
 
 table tr:nth-child(even) {
   background-color: #ffffff;
 }
+.facilities{
+  width: 250px;
+  /* border: 25px; */
+  display: block;
+  padding: 15px;
+}
+
+.mat-standard-chip {
+  height: 10px;
+  margin: 0px;
+  background-color: #e7f4f5;
+  align-items: center;
+}
+/* ::ng-deep .mat-select-trigger {
+  min-width: 10px;
+  max-height: 20px ;
+} */
+
+/* ::ng-deep .mat-select-panel {
+  max-height: 100px !important;
+} */

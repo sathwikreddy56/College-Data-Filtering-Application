@@ -1,7 +1,6 @@
 <div class="dashboard">
   <mat-drawer-container class="example-container">
     <mat-drawer mode="side" class="" opened>
-      <br />
       <div>
         <mat-card-content>
           <form class="my-form">
@@ -16,21 +15,27 @@
             <!--STATE INPUT-->
             <mat-form-field  appearance="fill">
               <mat-label>STATE</mat-label>
-              <mat-select (selectionChange)="onState($event)">
+              <mat-select  (selectionChange)="onState($event)">
                 <mat-option *ngFor="let state of statesarr" value={{state}}>{{state}}</mat-option>
               </mat-select>
             </mat-form-field>
             <!--CITY INPUT-->
             <mat-form-field appearance="fill">
               <mat-label>CITY</mat-label>
-              <mat-select (selectionChange)="onState($event)">
-                <mat-option *ngFor="let city of citiesarr" value={{city}}>{{city}}</mat-option>
+              <mat-select (selectionChange)="oncity($event)">
+                <mat-option small *ngFor="let city of citiesarr" value={{city}}>{{city}}</mat-option>
               </mat-select>
             </mat-form-field>
-
+            <div class="facilities">
+              <mat-chip-list #cl="matChipList" selectable multiple>
+                <mat-chip class="small-chip" defaultColor="accent" #c="matChip" *ngFor="let option of facilities" [value]="option" (click)="toggleSelection(c,cl)">
+                    {{option}}
+                </mat-chip>
+              </mat-chip-list>
+            </div>
           </form>
-          <button mat-raised-button class="filter-button center" (click)="populate_data()" id="submitButton" color="primary" >
-            Apply Filters
+          <button mat-raised-button class="filter-button center" id="submitButton" color="warn" >
+            Reset Filters
           </button>
         </mat-card-content>
       </div>
