@@ -1,4 +1,12 @@
 <div class="dashboard">
+<mat-toolbar>
+  <span>Mindler Project</span>
+  <span class="example-spacer"></span>
+  <button mat-raised-button class="btn example-spacer " (click)="logout()" color="warn">
+    <span>signout</span>
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>
   <mat-drawer-container class="example-container">
     <mat-drawer mode="side" class="" opened>
       <div>
@@ -7,12 +15,9 @@
             <!--SEARCH INPUT-->
             <mat-form-field class="full-width">
               <mat-label>Search</mat-label>
-              <input matInput placeholder="UserName" name="username" ngModel #username="ngModel" id="username"/>
+              <input matInput type="text" class="form-control" name="search" [(ngModel)]="search" (ngModelChange) = searchf()/>
             </mat-form-field>
-            <!--<select (change)="onState($event)">
-              <option *ngFor="let state of statesarr" value={{state}}>{{state}}</option>
-            </select>-->
-            <!--STATE INPUT-->
+            <!--state INPUT-->
             <mat-form-field  appearance="fill">
               <mat-label>STATE</mat-label>
               <mat-select  (selectionChange)="onState($event)">
@@ -34,7 +39,7 @@
               </mat-chip-list>
             </div>
           </form>
-          <button mat-raised-button class="filter-button center" id="submitButton" color="warn" >
+          <button mat-raised-button class="filter-button center" (click)="reset()" id="submitButton" color="primary" >
             Reset Filters
           </button>
         </mat-card-content>
