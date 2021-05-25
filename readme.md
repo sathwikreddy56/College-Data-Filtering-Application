@@ -14,6 +14,8 @@ The JSON file contains the fields:
 - Search bar wherein a user can search for a specific college using the name of the college.
 - Checklist wherein the user selects the facilities available in a college and the results are displayed in the decreasing order of the facilities available.
 
+## Production:
+ - youcan find the project at https://fervent-mccarthy-e0e1ca.netlify.app/
 
 
 ## Languages and Tools:
